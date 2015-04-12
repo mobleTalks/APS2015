@@ -61,7 +61,7 @@
 
 \author[Mike Boyle] {Mike Boyle}
 
-\institute{APS}
+\institute{American Physical Society}
 
 \date{April 12, 2015}
 
@@ -105,6 +105,12 @@
   \item Rotation
   \item Boost
   \end{itemize}
+
+  \vspace{0.25in}
+
+  \begin{center}
+    \visible<2->{Bondi-Metzner-Sachs (BMS) group}
+  \end{center}
 \end{frame}
 
 \begin{frame}
@@ -141,21 +147,70 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{BMS transformations}
+  \begin{align*}
+    \theta &\mapsto \theta' \\
+    \phi &\mapsto \phi' \\
+    u &\mapsto K(\theta', \phi') \left[u - \alpha(\theta', \phi')
+        \right]
+    % \\[20pt]
+    % \visible<3->{
+    % \alt<2>{h &\mapsto \frac{e^{-2i \lambda}}
+    % {K^{b}} \left[ h - \bar{\eth}^{2} \alpha \right]}{
+    % h(u, \theta, \phi) &\mapsto \frac{e^{-2i \lambda(\theta', \phi')}}
+    % {K^{b}(\theta', \phi')} \left[ h(u', \theta', \phi') -
+    % \bar{\eth}^{2} \alpha(\theta', \phi') \right]}}
+  \end{align*}
+
+  \pause
+
+  \begin{equation*}
+    \alt<3>{
+      h(u, \theta, \phi) \mapsto \frac{e^{-2i \lambda(\theta', \phi')}}
+      {K^{b}(\theta', \phi')} \left[ h(u', \theta', \phi') -
+        \bar{\eth}^{2} \alpha(\theta', \phi') \right]}{h \mapsto
+      \frac{e^{-2i \lambda}} {K^{b}\vphantom{(0)}} \left[ h -
+        \bar{\eth}^{2} \alpha \right]}
+  \end{equation*}
+\end{frame}
+
+\begin{frame}
   \frametitle{Effects on waveforms}
-  \only<1>{Time translation}
-  \only<3>{Rotation}
-  \only<2>{Space translation}
-  \only<4>{Boost}
-  \only<5>{Supertranslation}
+  \only<1>{Simplified waveform (zero $\ell>2$)}
+  \only<2>{Rotation $10^{-3}$ about $\hat{x}$}
+  \only<3>{Time translation $\delta t = -1000$}
+  \only<4>{Space translation $\delta \vec{x} = (0.1, 0, 0)$}
+  \only<5>{Spacetime translation $\delta = (-1000, 0.1, 0, 0)$}
+  \only<6>{Boost $\vec{v} = (10^{-4}, 0, 0)$}
+  \only<7>{Supertranslation $\sim 10^{-2}$}
   \begin{center}
-    \vspace{-0.1in}
-    \includegraphics<1>[width=\linewidth]{waveform_time_translation}
-    \includegraphics<2>[width=\linewidth]{waveform_space_translation}
-    \includegraphics<3>[width=\linewidth]
+    \vspace{-0.15in}
+    \includegraphics<1>[width=\linewidth]{waveform}
+    \includegraphics<2>[width=\linewidth]{waveform_rotation}
+    \includegraphics<3>[width=\linewidth]{waveform_time_translation}
+    \includegraphics<4>[width=\linewidth]{waveform_space_translation}
+    \includegraphics<5>[width=\linewidth]
       {waveform_spacetime_translation}
-    \includegraphics<4>[width=\linewidth]{waveform_boost}
-    \includegraphics<5>[width=\linewidth]{waveform_supertranslation}
+    \includegraphics<6>[width=\linewidth]{waveform_boost}
+    \includegraphics<7>[width=\linewidth]{waveform_supertranslation}
   \end{center}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Summary}
+  \begin{itemize}
+  \item Waveform comparisons
+  \item Must understand ambiguities
+  \item Ambiguities present in NR where we don't want them
+    \begin{itemize}
+    \item We can remove them!
+    \end{itemize}
+  \item Ambiguities absent in PN where we do want them
+    \begin{itemize}
+    \item We can insert them!
+    \end{itemize}
+  \end{itemize}
 \end{frame}
 
 
