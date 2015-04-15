@@ -1,0 +1,3 @@
+[submodule "Externals"]
+	path = Externals
+	url = ssh://monza/~/Papers/Externals
